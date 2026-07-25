@@ -1,0 +1,39 @@
+import 'package:flutter/material.dart';
+
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Food Order')),
+      body: Padding(
+        padding: EdgeInsetsGeometry.all(24),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Icon(Icons.restaurant_menu, size: 100, color: Colors.deepOrange),
+            SizedBox(height: 8),
+            Text(
+              "Welcome",
+              textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 8),
+            Text(
+              "Welcome to Food Order App, see food list to order",
+              textAlign: TextAlign.center,
+            ),
+            SizedBox(height: 8),
+            ElevatedButton.icon(
+              icon: Icon(Icons.fastfood),
+              onPressed: () {},
+              label: Text("See food list"),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
