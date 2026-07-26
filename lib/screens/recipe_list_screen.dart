@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_ordering_app/screens/recipe_detail_screen.dart';
 
 class RecipeListScreen extends StatefulWidget {
   const RecipeListScreen({super.key});
@@ -99,7 +100,16 @@ class _RecipeListScreenState extends State<RecipeListScreen> {
                     title: Text("Data"),
                     subtitle: Text("this is subtitle"),
                     trailing: Icon(Icons.arrow_forward, color: Colors.grey),
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (_) {
+                            return RecipeDetailScreen();
+                          },
+                        ),
+                      );
+                    },
                   ),
                 );
               },

@@ -17,7 +17,7 @@ class HomeScreen extends StatelessWidget {
             Icon(Icons.restaurant_menu, size: 100, color: Colors.deepOrange),
             SizedBox(height: 8),
             Text(
-              "Irashaimase~",
+              "Welcome",
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
             ),
