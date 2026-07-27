@@ -205,7 +205,7 @@ class _RecipeListScreenState extends State<RecipeListScreen> {
                 context,
                 MaterialPageRoute(
                   builder: (_) {
-                    return RecipeDetailScreen();
+                    return RecipeDetailScreen(recipe: recipe);
                   },
                 ),
               );

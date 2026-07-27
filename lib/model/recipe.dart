@@ -3,6 +3,7 @@ class Recipe {
   final String name;
   final String image;
   final String cuisine;
+  final int caloriesPerServing;
   final double rating;
   final List<String> ingredients;
   final List<String> instructions;
@@ -12,6 +13,7 @@ class Recipe {
     required this.name,
     required this.image,
     required this.cuisine,
+    required this.caloriesPerServing,
     required this.rating,
     required this.ingredients,
     required this.instructions,
@@ -23,6 +25,7 @@ class Recipe {
       name: json["name"] ?? "",
       image: json["image"] ?? "",
       cuisine: json["cuisine"] ?? "",
+      caloriesPerServing: json["caloriesPerServing"] ?? 0,
       rating: (json["rating"] as num?)?.toDouble() ?? 0,
       ingredients: (json["ingredients"] as List<dynamic>? ?? []).map((item) {
         return item.toString();
